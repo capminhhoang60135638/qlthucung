@@ -15,7 +15,7 @@
 			while ($row = mysqli_fetch_array($result)){
 				echo '<div  class="col-lg-4 col-md-12 p-1 w-100 rounded">
 					<div class="a m-1">
-					<a href="details_tintuc.php?ma_tin_tuc='.$row['0'].'"><img style="height:250px;" class="img-fluid w-100" src="image/'.$row['2'].'" alt="Card image" /></a>
+					<a href="xem_tintuc.php?ma_tin_tuc='.$row['0'].'"><img style="height:250px;" class="img-fluid w-100" src="image/'.$row['2'].'" alt="Card image" /></a>
 					<div class="card-body">
 						<h4 class="card-title">'.$row['1'].'</h4>
 						<i>Đã có '.$row['5'].' lượt xem</i>
