@@ -37,12 +37,12 @@
 			if(empty($_GET['ten_sp'])) echo "<p align='center'>Vui lòng nhập tên sản phẩm</p>";
 			else
 			{
-				$ten_tc=$_GET['ten_sp'];	
+				$ten_sp=$_GET['ten_sp'];	
 
-				$query="Select san_pham.*, ten_sp 
-				      from thu_cung,loai_san_pham 
-				      WHERE san_pham.ma_loai_sp=loai_san_pham.ma_loai_sp
-							AND ten_sp like '%$ten_sp%'";
+				$query="Select *
+				      from san_pham join loai_sp 
+				      on san_pham.ma_loai = loai_sp.ma_loai
+				      WHERE ten_sp like '%$ten_sp%'";
 				$result=mysqli_query($dbc,$query);		
 				if(mysqli_num_rows($result)<>0)
 				{	$rows=mysqli_num_rows($result);
@@ -51,10 +51,10 @@
 					{
 						echo '<div class="col-lg-4 col-sm-6"><table border="1" cellpadding="5" cellspacing="5" style="border-collapse:collapse;">
 							<tr bgcolor="#eeeeee"><td colspan="2" align="center"><h3>'.
-								$row['ten_sp'].' - '.$row['hang_sp'].' - 
+								$row['ten_sp'].' - '.$row['ten_loai'].' - 
 								'.$row['so_luong_ton'] . '<br>
 								'.$row['don_gia'] . ' <br> 
-								'.$row['ma_loai_sp'].'</h3></td></tr>';
+								'.$row['ma_loai'].'</h3></td></tr>';
 						echo '<tr><td width="200" align="center"><img style="width: 350px; height: 300px" src="image/'.$row['anh_minh_hoa'].'"/></td>';
 						
 						echo '</td></tr></table></div>';
@@ -70,6 +70,9 @@
 <?php
 	require('include/footerAdmin.html');
 ?>
+
+
+
 
 
 
