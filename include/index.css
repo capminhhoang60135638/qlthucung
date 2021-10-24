@@ -1,0 +1,23 @@
+.a{
+	padding: 4px;
+	background-color: #FFDAB9;
+	border-radius: 3%;
+}
+#anh_sp{
+	height: 300px;
+}
+.card-body{
+	height: 20vh;
+}
+.btn {
+	background-color: red; 
+	color: white;
+	float: right;
+	font-size: 15px;
+}
+.btn:hover {
+	background-color: white;
+	color: red;
+	border: 2px solid #f44336;
+}
+
