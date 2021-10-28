@@ -1,7 +1,7 @@
 
 <?php # Script - mysqli_connect.php
 
-require("connect.php");
+require("../connect.php");
 
 
 
@@ -36,6 +36,7 @@ else
 				<td><b>Năm sinh</b></td>
 				<td><b>Số điện thoại</b></td>
                 <td><b>Địa chỉ</b></td>
+				<td><b>Chức năng</b></td>
 		  	</tr>";
 	$stt=1;
 	while ($row = mysqli_fetch_array($result))
@@ -44,10 +45,16 @@ else
 		{	echo "<tr>";
 			echo "<td>$row[0]</td>";
 			echo "<td>$row[1]</td>";
-			echo "<td>$row[2]</td>";
+
+
+			if($row[2])
+				echo "<td>Nam</td>";
+			else
+				echo "<td>Nữ</td>";
 			echo "<td>$row[3]</td>";
 			echo "<td>$row[4]</td>";
             echo "<td>$row[5]</td>";
+			echo "<td><a href='deletenhanvien.php?manv=".$row[0]."'>Xóa</a>|<a href='editnhanvien.php?manv=".$row[0]."'>Sửa</a></td>";
 			echo "</tr>";
 		}
 		else
@@ -55,10 +62,14 @@ else
 			echo "<tr style='background-color: #ffb1007a;'>";
 			echo "<td>$row[0]</td>";
 			echo "<td>$row[1]</td>";
-			echo "<td>$row[2]</td>";
+			if($row[2])
+				echo "<td>Nam</td>";
+			else
+				echo "<td>Nữ</td>";
 			echo "<td>$row[3]</td>";
 			echo "<td>$row[4]</td>";
             echo "<td>$row[5]</td>";
+			echo "<td><a href='deletenhanvien.php?manv=".$row[0]."'>Xóa</a>|<a href='editnhanvien.php?manv=".$row[0]."'>Sửa</a></td>";
 			echo "</tr>";
 		}
 			$stt+=1;

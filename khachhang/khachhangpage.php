@@ -1,6 +1,6 @@
 <?php # Script - mysqli_connect.php
 
-require("connect.php");
+require("../connect.php");
 
 
 
@@ -46,7 +46,7 @@ else
 			echo "<td>$row[2]</td>";
 			echo "<td>$row[3]</td>";
 			echo "<td>$row[4]</td>";
-			echo "<td><a href=''>Xóa</a>|<a href=''>Sửa</a></td>";
+			echo "<td><a href='deletekhachhang.php?makh=".$row[0]."'>Xóa</a>|<a href='editkhachhang.php?makh=".$row[0]."'>Sửa</a></td>";
 			echo "</tr>";
 		}
 		else
@@ -57,7 +57,7 @@ else
 			echo "<td>$row[2]</td>";
 			echo "<td>$row[3]</td>";
 			echo "<td>$row[4]</td>";
-			echo "<td><a href=''>Xóa</a>|<a href=''>Sửa</a></td>";
+			echo "<td><a href='deletekhachhang.php?makh=".$row[0]."'>Xóa</a>|<a href='editkhachhang.php?makh=".$row[0]."'>Sửa</a></td>";
 			echo "</tr>";
 		}
 			$stt+=1;
