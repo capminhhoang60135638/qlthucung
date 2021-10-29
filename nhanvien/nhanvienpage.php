@@ -18,7 +18,7 @@ require("../connect.php");
 // Ket noi CSDL
 //require("connect.php");
 // Chuan bi cau truy van & Thuc thi cau truy van
-$strSQL = "SELECT * FROM `nhan_vien`";
+$strSQL = "SELECT * FROM `quan_tri`";
 $result = mysqli_query($dbc,$strSQL);
 // Xu ly du lieu tra ve
 if(mysqli_num_rows($result) == 0)
@@ -33,9 +33,9 @@ else
 				<td><b>Mã NV</b></td>
 				<td><b>Tên nhân viên</b></td>
 				<td><b>Giới tính</b></td>
-				<td><b>Năm sinh</b></td>
 				<td><b>Số điện thoại</b></td>
-                <td><b>Địa chỉ</b></td>
+				<td><b>Địa chỉ</b></td>
+                
 				<td><b>Chức năng</b></td>
 		  	</tr>";
 	$stt=1;
@@ -53,7 +53,7 @@ else
 				echo "<td>Nữ</td>";
 			echo "<td>$row[3]</td>";
 			echo "<td>$row[4]</td>";
-            echo "<td>$row[5]</td>";
+           
 			echo "<td><a href='deletenhanvien.php?manv=".$row[0]."'>Xóa</a>|<a href='editnhanvien.php?manv=".$row[0]."'>Sửa</a></td>";
 			echo "</tr>";
 		}
@@ -68,7 +68,7 @@ else
 				echo "<td>Nữ</td>";
 			echo "<td>$row[3]</td>";
 			echo "<td>$row[4]</td>";
-            echo "<td>$row[5]</td>";
+           
 			echo "<td><a href='deletenhanvien.php?manv=".$row[0]."'>Xóa</a>|<a href='editnhanvien.php?manv=".$row[0]."'>Sửa</a></td>";
 			echo "</tr>";
 		}
