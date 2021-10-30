@@ -15,7 +15,7 @@
     {   
         echo " <fieldset>
      <legend>NHÂN VIÊN</legend>
-        <a class='btn disabled' href='#'>Thêm mới</a>
+        <a class='btn btn-success' href='register-admin.php'>Thêm mới</a>
         <table class='table table-striped' width='100%'>
             <thead>
                 <td><b>STT</b></td>
