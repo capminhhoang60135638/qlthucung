@@ -29,7 +29,7 @@ session_start();
   </div>
   <ul class="nav flex-column mb-0"> 
     <li class="nav-item">
-      <a href="index.php" class="nav-link">
+      <a href="admin.php" class="nav-link">
             <i class="fas fa-home mr-3"></i>
             HOME
         </a>

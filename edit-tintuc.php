@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 		$tmp=$anh_bia['tmp_name'];
 		if(($type=='image/jpeg' || ($type=='image/bmp') || ($type=='image/gif') && $size<8000))
 		{
-			move_uploaded_file($tmp,"image/".$ten_anh_bia);
+			move_uploaded_file($tmp,"images/".$ten_anh_bia);
 		}$query="UPDATE tin_tuc
 	SET tieu_de = '$tieu_de', anh_bia= '$ten_anh_bia', tom_tat = '$tom_tat', noi_dung = '$noi_dung', ma_nv = '$nguoi_dang' WHERE ma_tin_tuc = '$ma_tin_tuc'";
 	}else{

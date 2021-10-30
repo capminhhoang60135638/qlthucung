@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 		$tmp=$anh_bia['tmp_name'];
 		if(($type=='image/jpeg' || ($type=='image/bmp') || ($type=='image/gif') && $size<8000))
 		{
-			move_uploaded_file($tmp,"image/".$ten_anh_bia);
+			move_uploaded_file($tmp,"images/".$ten_anh_bia);
 		}
 	}
 	$query="INSERT INTO tin_tuc VALUES ('$ma_tin_tuc','$tieu_de','$ten_anh_bia','$tom_tat','$noi_dung',$luot_xem,'$nguoi_dang')";

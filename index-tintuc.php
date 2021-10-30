@@ -33,7 +33,7 @@
                 echo "<td>$row[1]</td>";
                 echo "<td>$row[8]</td>";
                 echo "<td>$row[5]</td>";
-                echo "<td><a class='edit-btn' href='details-tintuc.php?ma_tin_tuc=".$row[0]."'><abbr title='truy cập bài đăng'><img src='image/details.png' width='20px' height='20px' /></abbr></a>|<a class='edit-btn' href='edit-tintuc.php?ma_tin_tuc=".$row[0]."'><abbr title='sửa bài đăng'><img src='image/edit.png' width='20px' height='20px' /></abbr></a>|<a class='edit-btn' onclick='delete();' href='delete-tintuc.php?ma_tin_tuc=".$row[0]."'><abbr title='xóa bài'><img src='image/delete.png' width='20px' height='20px' /></abbr></a></td>";
+                echo "<td><a class='edit-btn' href='details-tintuc.php?ma_tin_tuc=".$row[0]."'><abbr title='truy cập bài đăng'><img src='images/details.png' width='20px' height='20px' /></abbr></a>|<a class='edit-btn' href='edit-tintuc.php?ma_tin_tuc=".$row[0]."'><abbr title='sửa bài đăng'><img src='images/edit.png' width='20px' height='20px' /></abbr></a>|<a class='edit-btn' onclick='delete();' href='delete-tintuc.php?ma_tin_tuc=".$row[0]."'><abbr title='xóa bài'><img src='images/delete.png' width='20px' height='20px' /></abbr></a></td>";
                 echo "</tr>";
 
             $stt+=1;

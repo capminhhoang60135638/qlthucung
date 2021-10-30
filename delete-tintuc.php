@@ -23,7 +23,7 @@
 				echo '<div class="border_box">
 				 	<h3 style="text-align: center;">'.$row['tieu_de'].' ?</h3>
 				 	<div class="row">
-				 		<div class="col-lg-6 col-sm-12"><img style="width:80%; float:right" src="image/'.$row['anh_bia'].'" /></div>
+				 		<div class="col-lg-6 col-sm-12"><img style="width:80%; float:right" src="images/'.$row['anh_bia'].'" /></div>
 				 		<div class="col-lg-6 col-sm-12">
 				 			<label>Mã tin:'.$row['ma_tin_tuc'].'</label><br>
 				 			<label>Nội dung tóm tắt:</label><br><i>'.$row['tom_tat'].'<i><br>

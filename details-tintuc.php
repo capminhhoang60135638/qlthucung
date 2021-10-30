@@ -13,7 +13,7 @@
                 <legend>CHI TIẾT</legend>';
 				echo ' <div class="border_box p-2">
 					<h3 style="text-align: center;">'.$row['tieu_de'].'-'.$row['ma_tin_tuc'].'</h3>
-					<img style="width:300px; src="image/'.$row['anh_bia'].'" />
+					<img style="width:300px; src="images/'.$row['anh_bia'].'" />
 					<br><b>Lượt xem:'.$row['luot_xem'].'</b><br>
 					<div>'.$row['noi_dung'].'</div>
 				</div>

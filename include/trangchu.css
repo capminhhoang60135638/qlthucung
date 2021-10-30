@@ -1,0 +1,245 @@
+body{
+   
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #eee;
+    
+}
+.header{
+    background-color:white;
+    position: fixed;
+    width: 75%;
+    z-index: 999;    
+}
+.top-header{
+    height: 40px;
+}
+.phone{
+    display: block;
+    float: left;
+    margin-right: 12px;
+    border-right: 1px solid #eee;
+    line-height: 45px;
+}
+.phone-box{
+    color: #555;
+    font-size: 20px;
+    line-height: normal;
+    padding-right: 14px;
+    margin-top: 7px;
+}
+.welcome {
+    line-height: 40px;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.button-signout{
+    border-radius:5px ;
+
+}
+.container-xl{
+    background-color: white;
+    display: flex;
+    height: 173px;
+    width: 100%;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.logo{
+    margin-right: 0px;
+    position: relative;
+    display: table;
+    width: 150px;
+    left: 5%;
+}
+
+.logo img{
+    float: let;
+    border: 0px;
+    width: 150%;
+}
+.menu{
+    width: 85%;
+    font-size:large;
+    font-weight: 600;
+    margin-left: 150px;
+    padding-left: 50px;
+    
+}
+.menu-right ul {
+
+    list-style: none;
+    margin: 0;
+    border: 0;
+    line-height: 2;
+    box-sizing: border-box;
+    
+ }
+ .menu-right ul li{
+    margin-top :50px !important;
+    padding-left: 25px;
+}
+ .menu-item{
+    float: left;
+    padding: 0px 10px;
+    border: 0;
+    list-style: none;
+  
+}
+
+.menu-item a{
+    text-decoration: none;
+    color: black;
+
+}
+.menu-item li{
+    margin-top: 30px;
+    padding-left: 20px;
+}
+   
+.droplink{
+    background-color:white;
+    color:black;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    margin: 30px;
+    padding: 0;
+    
+ }
+
+ .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:white;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content ul{
+    padding: 0;
+    margin: 0;
+}
+.dropdown-item a{
+    
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    font-weight :600;
+    line-height: normal;
+    font-size: 17px;
+    margin: 0;
+}
+
+.dropdown-item:hover{background-color: white;}
+@media screen and (min-width: 768px){
+
+    .menu-item :hover {color: orange;}
+
+    .dropdown-item a:hover {color: orange;}
+
+    .dropdown:hover .dropdown-content {
+      
+        display: block;
+        
+    }
+    .button-signout :hover{background-color: orange;}
+    
+
+    .dropdown-content ul :hover  .dropdown-2  {
+        display: block;
+        right: 100%;
+        top :0;
+    }
+
+}
+
+
+
+
+.menu-left{
+    top:0;
+    float: right;
+    margin-right: 150px;
+}
+.menu-left ul li{
+    margin-top: 50px;
+    list-style: none;
+    padding-right:40px ;
+}
+
+.carousel{
+    width: 850px;
+    margin: auto;
+}
+
+/*trang hoat dong*/
+.title{
+    width: 100%;
+    text-align: center;
+}
+.slide-show{
+    position: relative;
+}
+.gird-img{
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+}
+.item-desktop a{
+    text-decoration: none;
+}
+.img-value img{
+
+    width: 100%;
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.item-desktop{
+    text-align: center;
+    float: left;
+    margin-bottom: 35px;
+   
+}
+.item-desktop h3{
+    font-size: 18px;
+    color: black;
+ 
+}
+#A{
+    width: 20%;
+}
+.contacts-info{
+    margin-left: 65px;
+   
+}
+.box{
+    background-color: #FFFF00   ;
+    border-radius: 10%;
+}
+    legend{
+        background-color: #FFFF33;
+        color: tomato;
+        text-align: center;
+        font-weight: bold;
+        width: auto;
+        border-radius: 20%;
+        padding: 5px 40px;
+    }
+    fieldset{
+        margin-top: 10px;
+        background-color: white;
+        border-radius: 5%;
+        margin: 10px;
+    }
+.btn-danger{
+    float: right;
+    font-size: 10px;
+}
+table{
+    background-color: white;
+    font-size: 20px;
+    border-radius: 10%;
+    padding: 10px;
+}
