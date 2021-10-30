@@ -3,13 +3,22 @@
 	include 'connection/connect.php';
 	$tb = "";
 	$ma_sp = $ten_sp =  $so_luong_ton =  $don_gia = $mo_ta = NULL;
+	$check = "SELECT * FROM san_pham";
+        $result1=mysqli_query($dbc,$check);
+        $ma = mysqli_num_rows($result1);
+        if ($ma>9) {
+            $ma_sp= "SP0".$ma+1;
+        }else{
+            $ma_sp= "SP00".$ma+1;
+        }
 if($_SERVER['REQUEST_METHOD']=="POST"){
-	if(empty($_POST['ma_sp'])){
-		$ma_sp="";
-	}
-	else{
-		$ma_sp=trim($_POST['ma_sp']);
-	}
+
+	// if(empty($_POST['ma_sp'])){
+	// 	$ma_sp="";
+	// }
+	// else{
+	// 	$ma_sp=trim($_POST['ma_sp']);
+	// }
 	if(empty($_POST['ten_sp'])){
 		$ten_sp="";
 	}
@@ -52,6 +61,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 			move_uploaded_file($tmp,"images/".$ten_anh_minh_hoa);
 		}
 	}
+	
 	$query="INSERT INTO san_pham VALUES ('$ma_sp','$ten_sp','$ma_hang','$so_luong_ton','$mo_ta','$ten_anh_minh_hoa','$don_gia','$ma_loai')";
 	$result=mysqli_query($dbc,$query);
 	if(mysqli_affected_rows($dbc)==1){//neu them thanh cong
@@ -68,7 +78,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
   <div class="form-group">
   	<?php echo $tb; ?>
   	<label>Mã sản phẩm:</label><span>(*)</span>
-  	<input class="form-control" type="text" name="ma_sp" placeholder="Mã sản phẩm bắt đầu bằng 'SP'" value="<?php if(isset($_POST['ma_sp'])) echo $_POST['ma_sp'];?>" pattern="[SP0-9]*" required/>
+  	<input class="form-control" type="text" name="ma_sp" placeholder="Mã sản phẩm bắt đầu bằng 'SP'" value="<?php echo $ma_sp;?>" pattern="[SP0-9]*" disabled/>
   	<label>Tên sản phẩm:</label><span>(*)</span>
   	<input class="form-control" type="text" name="ten_sp" value="<?php if(isset($_POST['ten_sp'])) echo $_POST['ten_sp'];?>" required/>
 
