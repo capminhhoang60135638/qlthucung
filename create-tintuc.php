@@ -3,6 +3,14 @@
 	include 'connection/connect.php';
 	$tb = "";
 	$ma_tin_tuc = $tieu_de = $noi_dung = $tom_tat = NULL;
+	$check = "SELECT * FROM tin_tuc";
+        $result1=mysqli_query($dbc,$check);
+        $ma = mysqli_num_rows($result1);
+        if ($ma>9) {
+            $ma_tin_tuc= "TT0".$ma+1;
+        }else{
+            $ma_tin_tuc= "TT00".$ma+1;
+        }
 if($_SERVER['REQUEST_METHOD']=="POST"){
 	if(empty($_POST['ma_tin_tuc'])){
 		$ma_tin_tuc="";
@@ -47,8 +55,8 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     <legend>THÊM MỚI TIN</legend>
   <div class="form-group">
 	<?php echo $tb;?>
-  	<label>Mã tin:</label><span>(*)</span>
-  	<input class="form-control" type="text" name="ma_tin_tuc" placeholder="Mã tin tức bắt đầu bới 'TT'" value="<?php if(isset($_POST['ma_tin_tuc'])) echo $_POST['ma_tin_tuc'];?>" pattern="[TT0-9]*" required/>
+  	<label>Mã tin:</label>
+  	<input class="form-control" type="text" name="ma_tin_tuc" value="<?php echo $ma_tin_tuc;?>" disabled/>
   	<label>Người đăng:</label><span>(*)</span>
   	<select name="nguoi_dang" class="form-control">
 				<?php 
