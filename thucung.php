@@ -25,9 +25,6 @@
 			</div>
 		</div>';
     }
-    $re = mysqli_query($dbc,$strSQL);
-    $numRow = mysqli_num_rows($re);
-    $maxPage = floor($numRow/$rowPerPage)+1;
 ?>
 <div class="container ">
     <div class="title"><h2>THÚ CƯNG</h2></div>
@@ -35,16 +32,23 @@
 		<?php echo $dl;?>
 	</div>
 	<?php 
-        echo '<center>';
+                echo '<center>';
+        $re = mysqli_query($dbc, 'select * from thu_cung');
+        // tổng số mẫu tin 
+        $numRow = mysqli_num_rows($re);
+        // tooneg so trang
+        $maxPage = floor($numRow/$rowPerPage)+1;
+        // echo 'Tổng số trang: '.$maxPage;
+        //tạo link tương ứng tới các trang
+
         for ($i=1 ; $i<=$maxPage ; $i++)
         {   if ($i == $_GET['page'])
-            {
-                echo '<a class="btn btn-sm page-number disabled bg-primary"><b style="color:white">'.$i.'</b></a> ';
+            { echo '<b class="btn" style="color:black">'.$i.'</b> '; //trang hiện tại sẽ được bôi đậm
             }
             else
-            echo "<a class='btn btn-sm btn-light' href=".$_SERVER['PHP_SELF']. "?page=".$i.">".$i."</a> ";
+            echo "<a class='btn' href=".$_SERVER['PHP_SELF']. "?page=".$i.">".$i."</a> ";
         }
-        echo '</center> </fieldset>';
+        echo '</center>';
     ?>
 </div>
 <?php 
