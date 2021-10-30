@@ -3,13 +3,16 @@
 	include 'connection/connect.php';
 	$tb = "";
 $ma_tc = $ten_tc = $tuoi = $so_luong_ton = $don_gia = $mo_ta = NULL;
+	$check = "SELECT * FROM thu_cung";
+        $result1=mysqli_query($dbc,$check);
+        $ma = mysqli_num_rows($result1);
+        if ($ma>9) {
+            $ma_tc= "TC0".$ma+1;
+        }else{
+            $ma_tc= "TC00".$ma+1;
+        }
 if($_SERVER['REQUEST_METHOD']=="POST"){
-	if(empty($_POST['ma_tc'])){
-		$ma_tc="";
-	}
-	else{
-		$ma_tc=trim($_POST['ma_tc']);
-	}
+
 	if(empty($_POST['ten_tc'])){
 		$ten_tc="";
 	}
@@ -73,7 +76,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
   <div class="form-group">
   	<?php echo $tb; ?>
   	<label>Mã thú cưng: </label><span>(*)</span>
-  	<input class="form-control" type="text" name="ma_tc" placeholder="Mã thú cưng bắt đầu bằng 'TC'" value="<?php if(isset($_POST['ma_tc'])) echo $_POST['ma_tc'];?>" pattern="[TC0-9]*" required/>
+  	<input class="form-control" type="text" name="ma_tc" value="<?php echo $ma_tc;?>" disabled/>
 
   	<label>Loại:</label><span>(*)</span>
   		<select name="loai_thu_cung" class="form-control" >
