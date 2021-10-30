@@ -33,7 +33,7 @@
                 $dl .= "<td>$row[2]</td>";
                 $dl .= "<td>$row[3]</td>";
                 $dl .= "<td>$row[6]</td>";
-                $dl .= "<td><a class='edit-btn' href='details-thucung.php?ma_tc=".$row[0]."'><abbr title='xem thú cưng'><img src='image/details.png' width='20px' height='20px' /></abbr></a>|<a class='edit-btn' href='edit-thucung.php?ma_tc=".$row[0]."'><abbr title='sửa thú cưng'><img src='image/edit.png' width='20px' height='20px' /></abbr></a>|<a class='edit-btn' href='delete-thucung.php?ma_tc=".$row[0]."'><abbr title='Xóa thú cưng'><img src='image/delete.png' width='20px' height='20px' /></abbr></a></td>";
+                $dl .= "<td><a class='edit-btn' href='details-thucung.php?ma_tc=".$row[0]."'><abbr title='xem thú cưng'><img src='images/details.png' width='20px' height='20px' /></abbr></a>|<a class='edit-btn' href='edit-thucung.php?ma_tc=".$row[0]."'><abbr title='sửa thú cưng'><img src='images/edit.png' width='20px' height='20px' /></abbr></a>|<a class='edit-btn' href='delete-thucung.php?ma_tc=".$row[0]."'><abbr title='Xóa thú cưng'><img src='images/delete.png' width='20px' height='20px' /></abbr></a></td>";
                 $dl .= "</tr>";
             $stt+=1;
         }
